@@ -66,15 +66,15 @@ def welcome():
 LATITUDE =""
 LONGITUDE =""
 # # Predicting Latitude and Longitude (LAT)
-def predict_coordinates(x_output, y_output, x_rel_pos_input, y_rel_pos_input):
-	coordinates = model_3.predict([[x_output, y_output, x_rel_pos_input, y_rel_pos_input]])
+def predict_coordinates(x_output):
+	coordinates = model_3.predict([[x_output]])
 	print(coordinates)
 	return coordinates
 # # Predicting Relative Position (RP)    
-def predict_relative_oposition(x_output, y_output, x_rel_pos_input, y_rel_pos_input):
-	relative_oposition = model_rp.predict([[x_output, y_output, x_rel_pos_input, y_rel_pos_input]])
-	print(relative_oposition)
-	return relative_oposition
+# def predict_relative_oposition(x_output, y_output, x_rel_pos_input, y_rel_pos_input):
+# 	relative_oposition = model_rp.predict([[x_output, y_output, x_rel_pos_input, y_rel_pos_input]])
+# 	print(relative_oposition)
+# 	return relative_oposition
 
 	
 
@@ -90,20 +90,21 @@ def main():
 	# defined in the above code
 	st.markdown(html_temp, unsafe_allow_html = True)
 	
+	
 	# the following lines create text boxes in which the user can enter
 	# the data required to make the prediction
-	x_output = st.text_input("INPUTX", "Type Here")
-	y_output = st.text_input("INPUTX", "Type Here")
-	x_rel_pos_input = st.text_input("INPUTX", "Type Here")
-	y_rel_pos_input = st.text_input("INPUTX", "Type Here")
+	x_output = st.text_input("INPUT_X", "")
+	y_output = st.text_input("INPUT_Y", "")
+	# x_rel_pos_input = st.text_input("INPUT_REL_X", "Type Here")
+	# y_rel_pos_input = st.text_input("INPUT_REL_Y", "Type Here")
         
 	
 	# the below line ensures that when the button called 'Predict' is clicked,
 	# the prediction function defined above is called to make the prediction
 	# and store it in the variable result
 	if st.button("Predict"):
-            LATITUDE = predict_coordinates(x_output, y_output, x_rel_pos_input, y_rel_pos_input)
-            LONGITUDE = predict_coordinates(x_output, y_output, x_rel_pos_input, y_rel_pos_input)
+            LATITUDE = predict_coordinates(x_output)
+            # LONGITUDE = predict_coordinates(x_output, y_output, x_rel_pos_input, y_rel_pos_input)
             st.success('The LATITUDE is {} & The LONGITUDE is {}'.format(LATITUDE, LONGITUDE))
             st.success('The LATITUDE is {} & The LONGITUDE is {}'.format(LATITUDE, LONGITUDE))
 	
