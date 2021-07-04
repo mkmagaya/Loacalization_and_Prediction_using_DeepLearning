@@ -477,7 +477,7 @@ predictions3 = (model_3.predict(x_test))
 # plt.plot(hist_latlong.history['accuracy'])
 # plt.plot(hist_latlong.history['val_accuracy'])
 # plt.title('Model Accuracy for predicting Latitude and Longitude(Normalised Model)')
-# plt.ylabel('accuracy')
+# plt.ylabel('accuracy')S
 # plt.xlabel('epoch')
 # plt.legend(['train', 'test'], loc='upper left')
 # plt.show()

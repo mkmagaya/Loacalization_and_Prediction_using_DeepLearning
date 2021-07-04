@@ -5,21 +5,7 @@ import pandas as pd
 #modeule to load saved models
 from tensorflow.keras.models import load_model  
 
-#Preprocessing
-from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA 
-from scipy.sparse import lil_matrix
 
-#Scoring Metrics
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import mean_squared_error
-from sklearn.metrics import mean_absolute_error
-
-import tensorflow as tf
-from keras.models import Sequential
-from keras.layers import *
 
 # LOAD DATA
 # path to the dataset
