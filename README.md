@@ -1,7 +1,7 @@
 "# Loacalization_and_Prediction_using_DeepLearning" 
 
-<!-- Streamlit link:  -->
+Streamlit link: 
 
-<!-- Colab link: -->
+Colab link:
 
-<!-- Video Demo link -->
+Video Demo link
