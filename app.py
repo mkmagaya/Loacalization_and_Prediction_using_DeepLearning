@@ -30,7 +30,7 @@ train_data.head()
 # LOADING MODELS
 # @st.cache(allow_output_mutation=True)
 # def load_models():
-    # Predicting Latitude and Longitude (LAT)
+# Predicting Latitude and Longitude (LAT)
 model_3 = load_model('./models/model_3.h5')
 # Predicting Relative Position (RP)
 model_rp = load_model('./models/model_rp.h5')
